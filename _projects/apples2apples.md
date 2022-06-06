@@ -1,13 +1,10 @@
 ---
-path: '/applestoapples'
 date: '2015-06-01'
+layout: project
 title: 'Apples to Apples'
-headerTitle: 'A2A'
 description: 'The Mattel board game on mobile for iOS.'
-type: 'project'
-logo: 'applestoapples/logo.png'
-main: 'applestoapples/main.jpg'
-backgroundColor: '#000000'
+logo: '/assets/images/applestoapples/logo.png'
+main: '/assets/images/applestoapples/main.jpg'
 technologies: ['Unity', 'C#', 'Strange IoC', 'Photon']
 ---
 

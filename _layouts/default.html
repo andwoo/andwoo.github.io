@@ -8,8 +8,17 @@
 </head>
 
 <body>
+  {% for social in site.data.author.socials %}
+  <div>
+    {{social.name}}
+    {{social.icon}}
+    {{social.url}}
+  </div>
+  {% endfor %}
+
   {% include navigation.html %}
   {{ content }}
+
 </body>
 
 </html>

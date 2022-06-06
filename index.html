@@ -3,3 +3,12 @@ layout: default
 title: Home
 ---
 <h1>{{"Hello World!" | downcase}}</h1>
+
+<ul>
+  {% assign projects = site.projects | sort: 'date' | reverse %}
+  {% for project in projects %}
+  <li>
+    {% include project-tile.html project=project %}
+  </li>
+  {% endfor %}
+</ul>

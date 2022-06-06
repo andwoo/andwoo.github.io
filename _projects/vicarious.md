@@ -1,13 +1,10 @@
 ---
-path: '/vicarious'
 date: '2017-05-01'
+layout: project
 title: 'Vicarious VR'
-headerTitle: 'Vicarious'
 description: 'A 360° media based social network.'
-type: 'project'
-logo: 'vicarious/logo.png'
-main: 'vicarious/main.jpg'
-backgroundColor: '#000000'
+logo: '/assets/images/vicarious/logo.png'
+main: '/assets/images/vicarious/main.jpg'
 technologies: ['Unity', 'C#', 'Objective C', 'Java', 'FFMPEG', 'VR']
 ---
 
@@ -15,4 +12,4 @@ Vicarious VR is a San Francisco based company where I led a remote team of 3 dev
 
 ---
 
-![Vicarious VR](../images/vicarious/main.jpg)
+![Vicarious VR](/assets/images/vicarious/main.jpg)

@@ -1,13 +1,10 @@
 ---
-path: '/hub'
 date: '2020-02-01'
+layout: project
 title: 'Hub Chrome Extension'
-headerTitle: 'Hub'
 description: 'Home screen extension on Chrome and Firefox.'
-type: 'project'
-logo: 'hub/logo.png'
-main: 'hub/main.png'
-backgroundColor: '#000000'
+logo: '/assets/images/hub/logo.png'
+main: '/assets/images/hub/main.png'
 repos: ['https://github.com/andwoo/browser-extension-homescreen']
 technologies: ['React', 'Redux', 'SCSS', 'Typescript']
 ---

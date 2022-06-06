@@ -1,13 +1,10 @@
 ---
-path: '/vidwithme'
 date: '2019-01-07'
+layout: project
 title: 'VidWith.me'
-headerTitle: 'VidWith.me'
 description: 'Online group Youtube watching website.'
-type: 'project'
-logo: 'vidwithme/logo.png'
-main: 'vidwithme/main.png'
-backgroundColor: '#000000'
+logo: '/assets/images/vidwithme/logo.png'
+main: '/assets/images/vidwithme/main.png'
 repos: ['https://github.com/andwoo/vidwithme-2']
 technologies: ['React', 'SCSS', 'Typescript', 'C#', 'ASP Core', 'SignalR']
 ---
@@ -16,4 +13,4 @@ Wanting to stay connected with friends I developed a group video streaming websi
 
 ---
 
-![VidWith.me](../images/vidwithme/main.png)
+![VidWith.me](/assets/images/vidwithme/main.png)

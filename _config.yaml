@@ -1,3 +1,5 @@
 collections:
+  projects:
+    output: true
   authors:
     output: true
