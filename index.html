@@ -4,11 +4,9 @@ title: Home
 ---
 <h1>{{"Hello World!" | downcase}}</h1>
 
-<ul>
+<div class="grid grid-cols-2 justify-items-center">
   {% assign projects = site.projects | sort: 'date' | reverse %}
   {% for project in projects %}
-  <li>
-    {% include project-tile.html project=project %}
-  </li>
+  {% include project-tile.html project=project %}
   {% endfor %}
-</ul>
+</div>

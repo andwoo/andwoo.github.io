@@ -1,14 +1,18 @@
 module.exports = {
+  mode: 'jit',
   content: [
     './_includes/**/*.html',
     './_layouts/**/*.html',
-    './_posts/*.md',
+    './_posts/*.html',
     './*.html',
+    './*.md',
   ],
   theme: {
     extend: {},
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
   plugins: [
     require('@tailwindcss/typography'),
   ],
