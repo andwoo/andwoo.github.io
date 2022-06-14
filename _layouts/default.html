@@ -9,18 +9,12 @@
   <title>{{ page.title }}</title>
 </head>
 
-<body>
-  {% for social in site.data.author.socials %}
-  <div>
-    {{social.name}}
-    {{social.icon}}
-    {{social.url}}
+<body class="w-screen h-screen">
+  <div class="min-h-full flex flex-col">
+    {% include header.html %}
+    <div class="flex-1">{{content}}</div>
+    {% include footer.html %}
   </div>
-  {% endfor %}
-
-  {% include navigation.html %}
-  {{ content }}
-
 </body>
 
 </html>

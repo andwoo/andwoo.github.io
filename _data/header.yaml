@@ -1,0 +1,10 @@
+nav:
+  - name: Home
+    link: /
+  - name: Blog
+    link: /blog.html
+socials:
+  - name: Github
+    link: https://github.com/andwoo
+  - name: LinkedIn
+    link: https://linkedin.com/in/andrewmanley/
