@@ -1,56 +1,92 @@
-// const density = '  ░▒▓█'
-const density = 'Ñ@#W$9876543210?!abc;:+=-,._ '
-const blockWidth = 12
-const blockHeight = 12
-let video
+// const densityString = '  ░▒▓█'
+// const densityString = '█▓▒░  '
+const densityString = 'Ñ@#W$9876543210?!abc;:+=-,._ '
+const asciiOptions = {
+  density: densityString,
+  fileName: '/assets/video/clouds.mp4',
+  colorRange: [0, 255],
+  densityRange: [0, densityString.length],
+  blockResolution: 4,
+  useResolutionAverage: false
+}
+
+let p5Video
+let p5VideoWidth
+let p5VideoHeight
+let asciiContainer
 
 function setup() {
   noCanvas();
   frameRate(16)
-  video = createVideo('/assets/video/clouds.mp4', function () {
-    const container = document.getElementById('asciiContainer')
-    container.className = 'asciiContainerLoaded'
+
+  p5Video = createVideo(asciiOptions.fileName, function () {
+    p5VideoWidth = p5Video.width
+    p5VideoHeight = p5Video.height
+
+    asciiContainer = document.getElementById('asciiContainer')
+    asciiContainer.className = 'asciiContainerLoaded'
+    const fontScale = (asciiContainer.clientWidth / p5VideoWidth) * 1.7
+    asciiContainer.style['fontSize'] = `${asciiOptions.blockResolution * fontScale}px`
+    asciiContainer.style['lineHeight'] = `${(asciiOptions.blockResolution / 1.2) * fontScale}px`
   })
-  video.volume(0);
-  video.loop();
-  video.hide()
+  p5Video.autoplay();
+  p5Video.volume(0);
+  p5Video.elt.muted = true
+  p5Video.loop();
+  p5Video.hide()
 }
 
 function draw() {
-  const container = document.getElementById('asciiContainer')
-  const fontScale = (container.clientWidth / video.width) * 1.7
-  container.style['fontSize'] = `${blockWidth * fontScale}px`
-  container.style['lineHeight'] = `${(blockWidth / 1.75) * fontScale}px`
-  // container.style['color'] = '#e2e8f0'
+  if (!asciiContainer) {
+    return
+  }
+  // const start = millis()
 
-  video.loadPixels()
+  p5Video.loadPixels()
   let imageText = ''
-  for (let y = 0; y < video.height; y += blockHeight) {
-    for (let x = 0; x < video.width; x += blockWidth) {
-      const xBound = x + blockWidth > video.width ? video.width - 1 : x + blockWidth
-      const yBound = y + blockHeight > video.height ? video.height - 1 : y + blockHeight
-      const average = pixelsAverage(x, y, xBound, yBound, video)
-      const densityIndex = floor(map(average, 0, 255, 0, density.length))
-      const character = density.charAt(densityIndex)
+  for (let y = 0; y < p5VideoHeight; y += asciiOptions.blockResolution) {
+    for (let x = 0; x < p5VideoWidth; x += asciiOptions.blockResolution) {
+      let luminosity
+      if (asciiOptions.useResolutionAverage) {
+        const xBound = x + asciiOptions.blockResolution > p5VideoWidth ? p5VideoWidth - 1 : x + asciiOptions.blockResolution
+        const yBound = y + asciiOptions.blockResolution > p5VideoHeight ? p5VideoHeight - 1 : y + asciiOptions.blockResolution
+        luminosity = pixelLuminosityAverage(x, y, xBound, yBound, p5Video.pixels, p5VideoWidth)
+      } else {
+        luminosity = pixelLuminosity(x, y, p5Video.pixels, p5VideoWidth)
+      }
+      const densityIndex = mapRange(luminosity, asciiOptions.colorRange, asciiOptions.densityRange)
+      const character = asciiOptions.density.charAt(densityIndex)
       imageText += character === ' ' ? '&nbsp;' : character
     }
     imageText += '</br>'
   }
-  container.innerHTML = imageText
+  asciiContainer.innerHTML = imageText
+
+  //   const end = millis()
+  //   console.log("frame " + (end - start) + "ms.")
 }
 
-function pixelsAverage(startX, startY, endX, endY, sourceImage) {
+function pixelLuminosityAverage(startX, startY, endX, endY, pixels, imageWidth) {
   let sum = 0
   let count = 0
   for (let x = startX; x <= endX; ++x) {
     for (let y = startY; y <= endY; ++y) {
-      const pixelIndex = (x + y * sourceImage.width) * 4
-      const r = sourceImage.pixels[pixelIndex + 0]
-      const g = sourceImage.pixels[pixelIndex + 1]
-      const b = sourceImage.pixels[pixelIndex + 2]
-      sum += (r + g + b) / 3
+      sum += pixelLuminosity(startX, startY, pixels, imageWidth)
       ++count
     }
   }
   return sum / count
+}
+
+function pixelLuminosity(x, y, pixels, imageWidth) {
+  const pixelIndex = (x + y * imageWidth) * 4
+  const r = pixels[pixelIndex + 0]
+  const g = pixels[pixelIndex + 1]
+  const b = pixels[pixelIndex + 2]
+  return ((0.21 * r) + (0.72 * g) + (0.07 * b))
+}
+
+function mapRange(value, oldRange, newRange) {
+  const newValue = (value - oldRange[0]) * (newRange[1] - newRange[0]) / (oldRange[1] - oldRange[0]) + newRange[0]
+  return Math.floor(Math.min(Math.max(newValue, newRange[0]), newRange[1]))
 }
