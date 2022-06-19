@@ -2,10 +2,20 @@
   min-height: 12rem;
 }
 
+.asciiContainerLoading {
+  color: #fff;
+}
+
+.asciiContainerLoaded {
+  color: #cbd5e0;
+}
+
 #asciiContainer {
   z-index: -1;
   position: fixed;
   width: 100vw;
   height: 100vh;
   font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+  transition: color 1s
 }

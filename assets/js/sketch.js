@@ -1,40 +1,42 @@
-// const density = ' .:░▒▓█'
+// const density = '  ░▒▓█'
 const density = 'Ñ@#W$9876543210?!abc;:+=-,._ '
-const blockWidth = 6
-const blockHeight = 6
-
-const arrayAverage = (array) => array.reduce((acc, val) => {
-  return acc + val
-}, 0) / array.length
-
-let testImage
-
-function preload() {
-  testImage = loadImage('/assets/images/building.jpeg')
-}
+const blockWidth = 12
+const blockHeight = 12
+let video
 
 function setup() {
   noCanvas();
+  frameRate(16)
+  video = createVideo('/assets/video/clouds.mp4', function () {
+    const container = document.getElementById('asciiContainer')
+    container.className = 'asciiContainerLoaded'
+  })
+  video.volume(0);
+  video.loop();
+  video.hide()
+}
 
+function draw() {
   const container = document.getElementById('asciiContainer')
-  const fontScale = (container.clientWidth / testImage.width) * 1.7
+  const fontScale = (container.clientWidth / video.width) * 1.7
   container.style['fontSize'] = `${blockWidth * fontScale}px`
   container.style['lineHeight'] = `${(blockWidth / 1.75) * fontScale}px`
-  container.style['color'] = '#e2e8f0'
+  // container.style['color'] = '#e2e8f0'
 
-  testImage.loadPixels()
-  for (let y = 0; y < testImage.height; y += blockHeight) {
-    let row = ''
-    for (let x = 0; x < testImage.width; x += blockWidth) {
-      const xBound = x + blockWidth > testImage.width ? testImage.width - 1 : x + blockWidth
-      const yBound = y + blockHeight > testImage.height ? testImage.height - 1 : y + blockHeight
-      const average = pixelsAverage(x, y, xBound, yBound, testImage)
+  video.loadPixels()
+  let imageText = ''
+  for (let y = 0; y < video.height; y += blockHeight) {
+    for (let x = 0; x < video.width; x += blockWidth) {
+      const xBound = x + blockWidth > video.width ? video.width - 1 : x + blockWidth
+      const yBound = y + blockHeight > video.height ? video.height - 1 : y + blockHeight
+      const average = pixelsAverage(x, y, xBound, yBound, video)
       const densityIndex = floor(map(average, 0, 255, 0, density.length))
-      row += density.charAt(densityIndex)
+      const character = density.charAt(densityIndex)
+      imageText += character === ' ' ? '&nbsp;' : character
     }
-    const div = createDiv(row)
-    div.parent(container)
+    imageText += '</br>'
   }
+  container.innerHTML = imageText
 }
 
 function pixelsAverage(startX, startY, endX, endY, sourceImage) {
