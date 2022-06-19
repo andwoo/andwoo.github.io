@@ -1,13 +1,19 @@
+body {
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
 .project-tile {
   min-height: 12rem;
 }
 
 .asciiContainerLoading {
-  color: #fff;
+  color: #1a202c;
 }
 
 .asciiContainerLoaded {
-  color: #cbd5e0;
+  color: #2d3748;
 }
 
 #asciiContainer {
@@ -15,7 +21,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: monospace;
   white-space: nowrap;
   transition: color 1s
 }

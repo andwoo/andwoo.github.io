@@ -1,12 +1,10 @@
-// const densityString = '  ░▒▓█'
-// const densityString = '█▓▒░  '
-const densityString = 'Ñ@#W$9876543210?!abc;:+=-,._ '
+const densityString = 'Ñ@#W$9876543210?!abc;:+=-,._ '.split("").reverse().join("")
 const asciiOptions = {
   density: densityString,
-  fileName: '/assets/video/clouds.mp4',
+  fileName: '/assets/video/loop.mp4',
   colorRange: [0, 255],
   densityRange: [0, densityString.length],
-  blockResolution: 4,
+  blockResolution: 3,
   useResolutionAverage: false
 }
 
@@ -40,7 +38,6 @@ function draw() {
   if (!asciiContainer) {
     return
   }
-  // const start = millis()
 
   p5Video.loadPixels()
   let imageText = ''
@@ -61,9 +58,6 @@ function draw() {
     imageText += '</br>'
   }
   asciiContainer.innerHTML = imageText
-
-  //   const end = millis()
-  //   console.log("frame " + (end - start) + "ms.")
 }
 
 function pixelLuminosityAverage(startX, startY, endX, endY, pixels, imageWidth) {
