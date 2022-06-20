@@ -3,23 +3,18 @@ layout: default
 title: Home
 ---
 <div class="flex flex-col items-center">
-  <div class="w-4/5 max-w-5xl flex flex-col items-center">
-    <div class="w-2/4 flex flex-row items-center my-10 bg-gray-900">
-      <div class="w-1/4">LOGO</div>
-      <div class="w-3/4">
-        I'm an Ottawa based developer with a background in game, mobile and web development. Always striving to be the
-        best
-        I
-        can be; my passion is to continuously learn and deliver quality code.
-      </div>
+  <div class="max-w-2xl flex flex-col p-4">
+    <div class="flex flex-row p-4 my-4 bg-gray-900">
+      I'm an Ottawa based developer with a background in game, mobile and web development. Always striving to be the
+      best
+      I
+      can be; my passion is to continuously learn and deliver quality code.
     </div>
 
-    <div class="flex flex-wrap justify-center">
-      {% assign projects = site.projects | sort: 'date' | reverse %}
-      {% for project in projects %}
-      {% include project-tile.html project=project %}
-      {% endfor %}
-    </div>
+    {% assign projects = site.projects | sort: 'date' | reverse %}
+    {% for project in projects %}
+    {% include project-tile.html project=project %}
+    {% endfor %}
   </div>
 </div>
 <script src="/assets/js/p5.min.js"></script>
