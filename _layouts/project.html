@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<img src="{{page.logo}}" />
-<img src="{{page.main}}" />
-
-{{ content }}
+<div class="flex flex-col items-center font-size-regular project">
+  <div class="max-w-4xl flex flex-col p-4">
+    <h1>{{page.title}}</h1>
+    {{ content }}
+  </div>
+</div>
