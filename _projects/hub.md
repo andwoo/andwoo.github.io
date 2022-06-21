@@ -13,4 +13,4 @@ Every time I launch my browser, I open several tabs to catch up on what's new on
 - [Firefox](https://addons.mozilla.org/en-CA/firefox/addon/hub/)
 
 <br>
-![Hub](/assets/images/hub/main.png){: .center-image }
+![Hub](/assets/images/hub/main.png)

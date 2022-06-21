@@ -25,7 +25,8 @@ body {
   line-height: 1.4;
 }
 
-.project {
+.project,
+.blog {
   a:link {
     text-decoration: none;
     color: #ed8936;
@@ -42,9 +43,9 @@ body {
   a:active {
     color: #dd6b20;
   }
-}
 
-.center-image {
-  margin: 0 auto;
-  display: block;
+  img {
+    margin: 0 auto;
+    display: block;
+  }
 }

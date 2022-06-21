@@ -11,4 +11,4 @@ The popular social game brought to mobile on iOS. My role on the project was tec
 - [Trailer](https://www.youtube.com/watch?v=fhtUYkDY-gQ)
 
 <br>
-![Apples to Apples Gameplay](/assets/images/applestoapples/main.jpg){: .center-image }
+![Apples to Apples Gameplay](/assets/images/applestoapples/main.jpg)

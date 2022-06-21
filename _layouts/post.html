@@ -1,12 +1,10 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p>
-  {{ page.date | date_to_string }}
-  {% assign author = site.authors | where: 'short_name', page.author | first %}
-  {% if author %}
-  - <a href="{{ author.url }}">{{ author.name }}</a>
-  {% endif %}
-</p>
-{{ content }}
+<div class="flex flex-col items-center font-size-regular blog">
+  <div class="max-w-4xl flex flex-col p-4">
+    <h1>{{ page.title }}</h1>
+    <div class="mb-4">{{ page.date | date_to_string }}</div>
+    {{ content }}
+  </div>
+</div>
