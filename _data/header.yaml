@@ -2,7 +2,7 @@ nav:
   - name: Home
     link: /
   - name: Blog
-    link: /blog.html
+    link: /blog
 socials:
   - name: Github
     link: https://github.com/andwoo
