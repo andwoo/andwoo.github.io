@@ -31,7 +31,7 @@ function setup() {
   p5Video.elt.setAttribute('muted', true);
   p5Video.volume(0);
   p5Video.loop();
-  p5Video.hide()
+  // p5Video.hide()
 }
 
 function draw() {
