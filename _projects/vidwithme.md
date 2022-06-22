@@ -12,5 +12,4 @@ Wanting to stay connected with friends I developed a group video streaming websi
 
 - [VidWith.me](https://vidwithme-2.herokuapp.com/)
 
-<br>
 ![VidWith.me](/assets/images/vidwithme/main.png)

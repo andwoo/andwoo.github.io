@@ -13,5 +13,4 @@ During my time at Karman Interactive I worked with the Toronto based kids learni
 ## Magic Camera
 The application is used in tandem with a physical playset and using the power of augmented reality the playset came to life. To accomplish this, we detected special areas of interest on the playset and overlaid animations on top giving new replay value. The app was a huge success and was featured as part of the iOS 12.0 AR launch and the physical playset is now sold in Apple Stores.
 
-<br>
 ![Sago Mini World](/assets/images/sago/main.png)

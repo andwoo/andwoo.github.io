@@ -12,5 +12,4 @@ Every time I launch my browser, I open several tabs to catch up on what's new on
 - [Chrome](https://chrome.google.com/webstore/detail/hub/fmbiminakmgaaglnogaemeighbdoolmi)
 - [Firefox](https://addons.mozilla.org/en-CA/firefox/addon/hub/)
 
-<br>
 ![Hub](/assets/images/hub/main.png)

@@ -7,18 +7,10 @@ title: Blog
   <div class="max-w-4xl flex flex-col p-4">
     <h1>Blog</h1>
     {% for post in site.posts %}
-    <div class="mb-4">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
+    <div class="mb-6">
+      <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date_to_string }}</a>
+      <div>{{ post.excerpt }}</div>
     </div>
     {% endfor %}
-    <!-- <ul>
-      {% for post in site.posts %}
-      <li>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        {{ post.excerpt }}
-      </li>
-      {% endfor %}
-    </ul> -->
   </div>
 </div>

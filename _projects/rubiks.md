@@ -17,11 +17,10 @@ A match 3 game where gameplay involves meeting objectives by matching tiles in d
 <br>
 [Trailer](https://www.facebook.com/RubiksUncubed/videos/1521018274865629/)
 
-<br>
 ![Rubik's Uncubed](/assets/images/rubiks/rubiks-0.jpg)
-<br>
+
 ![Rubik's Uncubed](/assets/images/rubiks/rubiks-1.jpg)
-<br>
+
 ![Rubik's Uncubed](/assets/images/rubiks/rubiks-2.jpg)
-<br>
+
 ![Rubik's Uncubed](/assets/images/rubiks/rubiks-3.jpg)
