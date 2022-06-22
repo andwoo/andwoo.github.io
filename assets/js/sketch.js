@@ -23,7 +23,7 @@ function setup() {
 
     asciiContainer = document.getElementById('asciiContainer')
     asciiContainer.className = 'asciiContainerLoaded'
-    const fontScale = (asciiContainer.clientWidth / p5VideoWidth) * 1.7
+    const fontScale = (asciiContainer.clientWidth / p5VideoWidth) * 2.2//1.7
     asciiContainer.style['fontSize'] = `${asciiOptions.blockResolution * fontScale}px`
     asciiContainer.style['lineHeight'] = `${(asciiOptions.blockResolution / 1.2) * fontScale}px`
   })
@@ -32,7 +32,7 @@ function setup() {
   p5Video.elt.setAttribute('playsinline', true);
   p5Video.volume(0);
   p5Video.loop();
-  // p5Video.hide()
+  p5Video.hide()
 }
 
 function draw() {
