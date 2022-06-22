@@ -26,8 +26,12 @@ function setup() {
     const fontScale = (asciiContainer.clientWidth / p5VideoWidth) * 1.7
     asciiContainer.style['fontSize'] = `${asciiOptions.blockResolution * fontScale}px`
     asciiContainer.style['lineHeight'] = `${(asciiOptions.blockResolution / 1.2) * fontScale}px`
+
+    p5Video.volume(0);
+    p5Video.elt.muted = true
+    p5Video.play()
   })
-  p5Video.autoplay();
+  p5Video.autoplay(false);
   p5Video.volume(0);
   p5Video.elt.muted = true
   p5Video.loop();
