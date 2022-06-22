@@ -29,6 +29,7 @@ function setup() {
   })
   p5Video.autoplay(true);
   p5Video.elt.setAttribute('muted', true);
+  p5Video.elt.setAttribute('playsinline', true);
   p5Video.volume(0);
   p5Video.loop();
   // p5Video.hide()
