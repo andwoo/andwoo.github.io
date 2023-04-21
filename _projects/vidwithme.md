@@ -14,3 +14,7 @@ Wanting to stay connected with friends I developed a group video streaming websi
 - [Github Repository](https://github.com/andwoo/vidwithme-2)
 
 ![VidWith.me](/assets/images/vidwithme/main.png)
+
+<br>
+### Update
+At this time Heroku has deprecated their free tier thus taking down VidWith.me. Upside is I get to take this time to research into different host providers to see what's out there. VidWith.me will be back!

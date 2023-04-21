@@ -2,7 +2,7 @@
 layout: post
 excerpt: I dipped my toes into the retro modding world with the Gameboy Color.
 ---
-Back in 2021 I started my mod journey by replacing Pokemon cartridge batteries and fixing a Gameboy Color that bad sound. I decided to write this post now because I ended up re-modded the Gameboy Color a year later and thought why not document its evolution.
+Back in 2021 I started my mod journey by replacing Pokemon cartridge batteries and fixing a Gameboy Color with bad sound. I decided to write this post now because I ended up re-modded the Gameboy Color a year later and thought why not document its evolution.
 
 <br>
 
@@ -30,6 +30,9 @@ I put the Gameboy Color in a display case and shifted to working on Gameboy Adva
 ![](/assets/images/2022-10-22-my-first-mod/8.jpg)
 
 I took this opportunity to try something new. What if I installed the new screen back in the original shell? "The lime green looks so good so why not give it a try" I said ignoring the disclaimer recommending not to do so.
+
+<br>
+
 > We do not recommend or provide support for modifying the original shell. It is very complicated and the screen assembly can easily be damaged. - Retro Game Repair Shop
 
 <br>
