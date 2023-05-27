@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <title>Gameboy Advances</title>
+</head>
+
+<body class="w-screen h-screen bg-gray-900">
+  <div id="asciiContainer" class="asciiContainerLoading"></div>
+  <div class="min-h-full flex flex-col text-gray-200">
+    <div class="flex flex-row p-4 bg-gray-900">
+  <nav class="flex flex-row font-size-regular">
+  
+  <a href=/ class="hover:text-gray-400 mr-4">
+    Home
+  </a>
+  
+  <a href=/blog class="hover:text-gray-400 mr-4">
+    Blog
+  </a>
+  
+</nav>
+  <div class='flex-1'></div>
+  <div class="flex flex-row font-size-regular">
+  
+  <a href=https://github.com/andwoo class="hover:text-gray-400 ml-4">
+    Github
+  </a>
+  
+  <a href=https://linkedin.com/in/andrewmanley/ class="hover:text-gray-400 ml-4">
+    LinkedIn
+  </a>
+  
+</div>
+</div>
+    <div class="flex-1"><div class="flex flex-col items-center font-size-regular blog">
+  <div class="max-w-4xl flex flex-col p-4">
+    <h1>Gameboy Advances</h1>
+    <div class="mb-4">20 Nov 2021</div>
+    <p>The Gameboy Advance is an amazing device and I wanted to mod one for a friend. The beauty of modding is it breaths new life into a device and enhances its capabilities. Here’s a list of changes I will be doing:</p>
+<ul>
+  <li>IPS screen by Funnyplaying (V2)</li>
+  <li>Tantalum Capacitors by Helder</li>
+  <li>Power Cleaner by Helder</li>
+  <li>New shell, buttons and membranes</li>
+</ul>
+
+<p>I found an Ebay post selling two GBAs at a good price. The catch was they were missing their battery covers and were quite dirty but that’s no problem! All I need to do is clean up the board and perform any repairs if needed.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/1.jpeg" alt="" /></p>
+
+<p>The shoulder buttons were quite dirty. I tried to bring them back to their original colour but stopped midway because I wouldn’t be using them in the final builds. I’ll keep them as spare parts and will finish cleaning them when they’re needed.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/2.jpeg" alt="" /></p>
+
+<p>I spent several hours doing a deep clean of both devices and sadly they don’t look much different. Unfortunately the scratches really steal the focus but I swear they’re clean! While testing the devices I noticed the Coral GBA had inconsistent shoulder buttons. They would only register clicks around 70% of the time so I will need to figure out how to clean them better or replace the components. For this build I will be using the Glacier.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/3.jpeg" alt="" /></p>
+
+<p>Power cleaner install time. The cleaner and resistors have been pre-tinned to make the install much easier.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/4.jpeg" alt="" /></p>
+
+<p>I tapped down the cleaner, with some capton tape, to prevent any shifts during soldering. My hands tend to shake so this helps a bunch.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/5.jpeg" alt="" /></p>
+
+<p>The cleaner and new capacitors will reduce the hiss and hum from the speaker caused by the IPS screen and any future power hungry mods that might be installed. It won’t completely remove the hiss but it will greatly reduce it.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/6.jpeg" alt="" /></p>
+
+<p>Onto replacing the capacitors. Here’s a before picture of the original 4 capacitors (1 on left, 3 on right).</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/7.jpeg" alt="" /></p>
+
+<p>All 4 removed and surfaces cleaned.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/8.jpeg" alt="" /></p>
+
+<p>And 4 new tantalum capacitors.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/9.jpeg" alt="" /></p>
+
+<p>Now we start the new IPS screen installation. Before this picture was taken I confirmed the screen was indeed working. I decided to add a layer of capton tape to the back of the screen to remove any possible shorts the bare metal back might cause.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/10.jpeg" alt="" /></p>
+
+<p>Three wires have been soldered to the screen’s ribbon cable. These wires will connect to the select, left and right shoulder buttons and control the screen brightness.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/11.jpeg" alt="" /></p>
+
+<p>The select wire is soldered to the TP2 pad.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/12.jpeg" alt="" /></p>
+
+<p>I added a piece of capton tape here to reduce the stress the wire might have on the pad when moving the board around during installation or if we need to re-shell in the future. In my first GBA build I accidentally ripped the pad off and was crushed, I will never let that happen again!</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/13.jpeg" alt="" /></p>
+
+<p>I cut a slit in the top of the foam to let the wires pass through.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/14.jpeg" alt="" /></p>
+
+<p>Now it’s time to solder the left and right shoulder button wires. I added a piece of tape to the left wire to differentiate between the two.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/15.jpeg" alt="" /></p>
+
+<p>Soldering is complete and all that’s left is attaching the ribbon cable.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/16.jpeg" alt="" /></p>
+
+<p>Capton tape is added to keep the wires in place and to reduce stress on the solder points if we need to take the device apart. We are done! Time to attach the back of the shell and the screen lens.</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/17.jpeg" alt="" /></p>
+
+<p>Done!</p>
+
+<p><img src="/assets/images/2021-11-20-gameboy-advances/18.jpeg" alt="" /></p>
+
+    <div class="justify-start mt-8">
+      <a href="/blog">
+        < Back</a>
+    </div>
+  </div>
+</div></div>
+    <div class="flex flex-row p-4 bg-gray-900">
+  ☕
+  <div class='flex-1'></div>
+  <div class="flex flex-row font-size-regular">
+  
+  <a href=https://github.com/andwoo class="hover:text-gray-400 ml-4">
+    Github
+  </a>
+  
+  <a href=https://linkedin.com/in/andrewmanley/ class="hover:text-gray-400 ml-4">
+    LinkedIn
+  </a>
+  
+</div>
+</div>
+  </div>
+</body>
+
+</html>
