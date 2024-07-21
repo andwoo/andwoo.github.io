@@ -1,0 +1,19 @@
+body { font-family: monospace; }
+
+.asciiContainerLoading { color: #1a202c; }
+
+.asciiContainerLoaded { color: #2d3748; }
+
+#asciiContainer { font-family: monospace; height: 100vh; position: fixed; transition: color 1s; white-space: nowrap; width: 100vw; z-index: -1; }
+
+.font-size-regular { font-size: 1rem; line-height: 1.4; }
+
+.blog a:link, .project a:link { text-decoration: none; }
+
+.blog a:link, .blog a:visited, .project a:link, .project a:visited { color: #ed8936; }
+
+.blog a:active, .blog a:hover, .project a:active, .project a:hover { color: #dd6b20; }
+
+.blog img, .project img { display: block; margin: 1rem auto; }
+
+/*# sourceMappingURL=styles.css.map */
